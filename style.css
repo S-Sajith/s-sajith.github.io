@@ -128,14 +128,23 @@ main {
   height: 7rem;
 }
 
+.about-text {
+  padding: 1rem; 
+  border: 1px solid var(--highlight-low); 
+  border-radius: 0.5rem; 
+  background-color: var(--surface); 
+  max-width: 50rem; 
+  text-align: justify;
+}
+
 #skills p {
   text-align: center;
 }
 
 #skills span {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   margin: 2rem;
 }
 
@@ -245,5 +254,43 @@ footer div a img {
 
   #projects span {
     grid-template-columns: auto;
+  }
+}
+
+#about a.download-link {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: var(--surface);
+  color: var(--accent);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#about a.download-link:hover {
+  background-color: var(--highlight-high);
+  color: var(--text);
+}
+
+
+@media (max-width: 1200px) {
+  #skills span {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  #skills span {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #skills span {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-icon {
+    display: none;
   }
 }
