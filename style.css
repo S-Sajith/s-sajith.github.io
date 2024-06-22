@@ -146,6 +146,8 @@ main {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin: 2rem;
+  justify-content: center;
+  justify-items: center; 
 }
 
 #skills span div {
