@@ -1,168 +1,215 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/icon.svg" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Sajith S</title>
-  </head>
 
-  <body>
-    <header>
-      <a href="" id="brand">Sajith S</a>
-      <nav>
-        <input type="checkbox" id="hamburg" />
-        <label for="hamburg" class="hamburg">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </label>
-        <ul class="topmenu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Sajith S</title>
+</head>
 
-    <main>
-      <section id="about" class="container">
+<body>
+  <header>
+    <a href="" id="brand">Portfolio</a>
+    <nav>
+      <input type="checkbox" id="hamburg" />
+      <label for="hamburg" class="hamburg">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </label>
+      <ul class="topmenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about" class="container">
+      <div class="about-text-block">
         <div>
-          <h1>Hi,</h1>
-          <h1>I'm Sajith S</h1>
+          <h1>Sajith S</h1>
+          <h3>Software Engineer</h3>
           <p class="about-text">
-            I am a front-end developer with 2 years of experience in
-            building responsive web applications using React and Material UI. I
+            I am a Software Engineer with 2.5 years of experience in
+            building responsive web applications using React. I
             am well-versed in creating dynamic UI components and adept at
             quickly adapting to new libraries and frameworks.
           </p>
-          <a
-            href="https://drive.google.com/uc?export=download&id=1aMgR8HMPKCSGgf_aMTnv2KKdyfEqjLQ7"
-            download
-            class="download-link"
-            target="_blank"
-            >Download Resume</a
-          >
+          <a href="https://drive.google.com/uc?export=download&id=1MdHAoDeUZjeJhqD3sYvigkr6uEz4wD1n" download
+            class="fancy-button" target="_blank">
+            Download Resume
+            <span class="arrow">→</span>
+          </a>
+
+          <div class="about-social-icons">
+            <a href="https://github.com/S-Sajith" target="_blank"><img src="assets/github.svg" alt="GitHub" /></a>
+            <a href="mailto:sajithk14820@gmail.com" target="_blank"><img src="assets/email.svg" alt="Email" /></a>
+            <a href="https://www.linkedin.com/in/sajith-sk/" target="_blank"><img src="assets/linkedin.svg"
+                alt="LinkedIn" /></a>
+          </div>
         </div>
-        <img src="assets/icon.svg" class="about-icon" />
-      </section>
-      <section id="skills" class="container">
-        <h2>Skills & Tools</h2>
-        <p>The skills, tools and technologies I am familiar with</p>
-        <span>
-          <div>
-            <img src="assets/html.svg" />
-            <p>HTML5</p>
-          </div>
-          <div>
-            <img src="assets/css.svg" />
-            <p>CSS3</p>
-          </div>
-          <div>
-            <img src="assets/js.svg" />
-            <p>JavaScript</p>
-          </div>
-          <div>
-            <img src="assets/typescript.svg" />
-            <p>TypeScript</p>
-          </div>
-          <div>
-            <img src="assets/react.svg" />
-            <p>React</p>
-          </div>
-          <div>
-            <img src="assets/material-ui.svg" />
-            <p>Material UI</p>
-          </div>
-          <div>
-            <img src="assets/tailwind.svg" />
-            <p>Tailwind CSS</p>
-          </div>
-          <div>
-            <img src="assets/git.svg" />
-            <p>Git</p>
-          </div>
-          <!-- <div>
-          <img src="assets/postman.svg" />
-          <p>Postman</p>
-        </div> -->
-        </span>
-      </section>
-      <section id="projects" class="container">
-        <h2>Projects</h2>
-        <span>
-          <a href="https://air-bargain.netlify.app/" target="_blank">
-            <h3>React, Material UI, React Router</h3>
-            <h2>Air Bargain</h2>
-            <p>
-              Air Bargain is a responsive web application developed with React
-              and Material-UI, enabling users to search for cheap domestic
-              flights in India. It fetches flight data using Axios from the
-              Kiwi.com API and utilizes Context API for state management across
-              different pages.
-            </p>
-          </a>
+      </div>
+    </section>
 
-          <a href="https://top-trax.netlify.app/" target="_blank">
-            <h3>React, Tailwind CSS, Spotify API</h3>
-            <h2>TopTrax</h2>
-            <p>
-              TopTrax is a single-page application built with React and Tailwind
-              CSS that leverages Spotify’s RESTful API, enabling users to
-              explore their most frequently played tracks over various time
-              periods and create playlists of the top songs of that selected
-              time period
-            </p>
-          </a>
+    <hr class="section-divider" />
 
-          <a href="https://github.com/S-Sajith/focus-line" target="_blank">
-            <h3>React, Material UI, Chrome API</h3>
-            <h2>Focus Line</h2>
-            <p>
-              A browser extension that adds a reading ruler to maintain focus on
-              specific lines in dense webpages. It uses Chrome's storage API for
-              persistent user customization of color, height, and visibility,
-              and employs React and Material-UI for a user-friendly
-              configuration interface in a popup window.
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/S-Sajith/s-sajith.github.io"
-            target="_blank"
-          >
-            <h3>HTML, CSS</h3>
-            <h2>My Portfolio Website</h2>
-            <p>
-              A simple portfolio site made using HTML and CSS, designed to load
-              quickly, look clean, and be easily updatable. The website has been
-              deployed using GitHub Pages.
-            </p>
-          </a>
-        </span>
-      </section>
-    </main>
-
-    <footer>
+    <section id="skills" class="container">
+      <h2>Skills & Tools</h2>
+      <p>The skills, tools and technologies I am familiar with</p>
       <span>
-        <p>
-          © 2024
-          <a href="https://github.com/S-Sajith" target="_blank">Sajith S</a>
-        </p>
-        <div id="social">
-          <a href="https://github.com/S-Sajith" target="_blank"
-            ><img src="assets/github.svg"
-          /></a>
-          <a href="mailto:sajithk14820@gmail.com" target="_blank"
-            ><img src="assets/email.svg"
-          /></a>
-          <a href="https://www.linkedin.com/in/sajith-sk/" target="_blank"
-            ><img src="assets/linkedin.svg"
-          /></a>
+        <div>
+          <img src="assets/html.svg" />
+          <p>HTML5</p>
+        </div>
+        <div>
+          <img src="assets/css.svg" />
+          <p>CSS3</p>
+        </div>
+        <div>
+          <img src="assets/js.svg" />
+          <p>JavaScript</p>
+        </div>
+        <div>
+          <img src="assets/typescript.svg" />
+          <p>TypeScript</p>
+        </div>
+        <div>
+          <img src="assets/react.svg" />
+          <p>React</p>
+        </div>
+        <div>
+          <img src="assets/material-ui.svg" />
+          <p>Material UI</p>
+        </div>
+        <div>
+          <img src="assets/tailwind.svg" />
+          <p>Tailwind CSS</p>
+        </div>
+        <div>
+          <img src="assets/git.svg" />
+          <p>Git</p>
         </div>
       </span>
-    </footer>
-  </body>
+    </section>
+
+
+    <section id="projects" class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <p class="project-type">Web Application</p>
+          <h2 class="project-title">Air Bargain</h2>
+          <div class="tech-chips">
+            <span>React</span>
+            <span>Material UI</span>
+            <span>React Router</span>
+          </div>
+          <p class="project-description">
+            Air Bargain is a responsive web application developed with React
+            and Material-UI, enabling users to search for cheap domestic
+            flights in India. It fetches flight data using Axios from the
+            Kiwi.com API and utilizes Context API for state management across
+            different pages.
+          </p>
+          <a href="https://air-bargain.netlify.app/" target="_blank" class="fancy-button">Check it out<span
+              class="arrow">→</span></a>
+        </div>
+
+        <div class="project-card">
+          <p class="project-type">Web Application</p>
+          <h2 class="project-title">AquaTrack</h2>
+          <div class="tech-chips">
+            <span>React</span>
+            <span>Material UI</span>
+            <span>Context API</span>
+          </div>
+          <p class="project-description">
+            AquaTrack is a hydration tracking app built with React and Material UI. It lets users log intake, set goals,
+            and unlock achievements with state managed via Context API. Hydration trends are visualized using date-fns
+            in a clean, responsive UI.
+          </p>
+          <a href="https://aqua-track-app.netlify.app/" target="_blank" class="fancy-button">Check it out<span
+              class="arrow">→</span></a>
+        </div>
+
+        <div class="project-card">
+          <p class="project-type">Web Application</p>
+          <h2 class="project-title">TopTrax</h2>
+          <div class="tech-chips">
+            <span>React</span>
+            <span>Tailwind CSS</span>
+            <span>Spotify API</span>
+          </div>
+          <p class="project-description">
+            TopTrax is a single-page application built with React and Tailwind
+            CSS that leverages Spotify’s RESTful API, enabling users to
+            explore their most frequently played tracks over various time
+            periods and create playlists of the top songs of that selected
+            time period
+          </p>
+          <a href="https://top-trax.netlify.app/" target="_blank" class="fancy-button">Check it out<span
+              class="arrow">→</span></a>
+        </div>
+
+        <div class="project-card">
+          <p class="project-type">Chrome Extension</p>
+          <h2 class="project-title">Focus Line</h2>
+          <div class="tech-chips">
+            <span>React</span>
+            <span>Material UI</span>
+            <span>Chrome API</span>
+          </div>
+          <p class="project-description">
+            A browser extension that adds a reading ruler to maintain focus on
+            specific lines in dense webpages. It uses Chrome's storage API for
+            persistent user customization of color, height, and visibility,
+            and employs React and Material-UI for a user-friendly
+            configuration interface in a popup window.
+          </p>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/focus-line/ajkfgjmebminffkiolfpbmepngldochg"
+            target="_blank" class="fancy-button">Check it out<span class="arrow">→</span></a>
+        </div>
+
+        <div class="project-card">
+          <p class="project-type">Portfolio</p>
+          <h2 class="project-title">My Portfolio Website</h2>
+          <div class="tech-chips">
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+          <p class="project-description">
+            A simple portfolio site made using HTML and CSS, designed to load
+            quickly, look clean, and be easily updatable. The website has been
+            deployed using GitHub Pages.
+          </p>
+          <a href="https://github.com/S-Sajith/s-sajith.github.io" target="_blank" class="fancy-button">Check it
+            out<span class="arrow">→</span></a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>
+      <p>
+        2025
+        <a href="https://github.com/S-Sajith" target="_blank">Sajith S</a>
+      </p>
+      <div id="social">
+        <a href="https://github.com/S-Sajith" target="_blank"><img src="assets/github.svg" /></a>
+        <a href="mailto:sajithk14820@gmail.com" target="_blank"><img src="assets/email.svg" /></a>
+        <a href="https://www.linkedin.com/in/sajith-sk/" target="_blank"><img src="assets/linkedin.svg" /></a>
+      </div>
+    </span>
+  </footer>
+</body>
+
 </html>

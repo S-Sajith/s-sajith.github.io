@@ -20,7 +20,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   background-color: var(--base);
   color: var(--text);
 }
@@ -107,47 +107,125 @@ main {
 }
 
 .container {
-  min-height: 90vh;
-  padding: 5vh var(--padding-x);
+  padding: 2rem var(--padding-x);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 }
 
+/** about **/
+
 #about {
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.about-text-block {
+  max-width: 36rem;
 }
 
 #about div h1 {
   line-height: 0.8;
 }
 
-#about img {
-  height: 7rem;
+.about-text {
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--highlight-low);
+  border-radius: 0.5rem;
+  background-color: var(--surface);
+  max-width: 50rem;
+  text-align: center;
 }
 
-.about-text {
-  padding: 1rem; 
-  border: 1px solid var(--highlight-low); 
-  border-radius: 0.5rem; 
-  background-color: var(--surface); 
-  max-width: 50rem; 
-  text-align: justify;
+/** fancy button **/
+
+a.fancy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  background-color: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 0.6rem;
+  box-shadow: 4px 4px 0 var(--highlight-high);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+a.fancy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 0 var(--highlight-high);
+  color: var(--text);
+  background-color: var(--highlight-high);
+}
+
+a.fancy-button .arrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+a.fancy-button:hover .arrow {
+  transform: translateX(4px);
+}
+
+/** social icons **/
+
+.about-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.about-social-icons a img {
+  height: 1.2rem;
+  width: 1.2rem;
+  filter: invert();
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.about-social-icons a:hover img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 0.4rem var(--accent));
+}
+
+/** skills **/
+
+#skills {
+  padding-top: 0;
+  margin-top: -1rem;
+}
+
+#skills h2 {
+  margin-bottom: 0.25rem;
 }
 
 #skills p {
+  margin-top: 0;
+  font-size: 0.95rem;
   text-align: center;
 }
 
 #skills span {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin: 2rem;
-  justify-content: center;
-  justify-items: center; 
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 900px;
+  justify-items: center;
 }
 
 #skills span div {
@@ -155,54 +233,86 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem 2rem;
   flex: 1;
+  padding: 0.5rem;
 }
 
 #skills span div:hover {
-  cursor: pointer;
-  scale: 1.1;
+  transform: scale(1.1);
   filter: drop-shadow(0 0 1rem var(--accent));
 }
 
 #skills span div img {
-  width: clamp(2em, 15vw, 6em);
+  width: clamp(2em, 10vw, 3.5em);
 }
 
 #skills span div p {
   text-align: center;
+  font-size: 0.85rem;
 }
 
-#projects span {
+/** project **/
+
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
 }
 
-#projects span a {
-  padding: 0 2rem;
-  margin: 0.8rem;
+.project-card {
   background-color: var(--surface);
-  border-radius: 2rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
-#projects span a:hover {
+.project-card:hover {
   background-color: var(--highlight-high);
 }
 
-#projects span a h3 {
+.project-type {
   color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+  margin-bottom: 0.25rem;
 }
 
-#projects span a p {
-  color: var(--accent);
-}
-
-#projects span a h2 {
+.project-title {
+  margin: 0;
   color: var(--text);
-  margin: -0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.tech-chips span {
+  background-color: var(--highlight-low);
+  color: var(--accent);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  flex-grow: 1;
+  margin-bottom: 1rem;
 }
 
 /** footer **/
+
 footer {
   height: 7rem;
   background-color: var(--surface);
@@ -236,6 +346,23 @@ footer div a img {
   filter: invert();
 }
 
+.section-divider {
+  border: none;
+  height: 1px;
+  width: 80%;
+  margin: 0.5rem auto;
+  background: repeating-linear-gradient(
+    to right,
+    var(--accent),
+    var(--accent) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  opacity: 0.6;
+}
+
+/** Responsive **/
+
 @media (max-width: 700px) {
   #brand {
     margin-top: 0.3rem;
@@ -259,40 +386,25 @@ footer div a img {
   }
 }
 
-#about a.download-link {
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  background-color: var(--surface);
-  color: var(--accent);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-#about a.download-link:hover {
-  background-color: var(--highlight-high);
-  color: var(--text);
-}
-
-
 @media (max-width: 1200px) {
   #skills span {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
 @media (max-width: 900px) {
   #skills span {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 600px) {
   #skills span {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 0.75rem;
   }
-}
 
-@media (max-width: 600px) {
-  .about-icon {
-    display: none;
+  #skills span div img {
+    width: 3em;
   }
 }
